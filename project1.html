@@ -1,0 +1,103 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="utf-8" />
+    <title>Project 1 - Phyllotaxis</title>
+    <link rel="stylesheet" href="css/styles.css">
+    <link href="https://fonts.googleapis.com/css?family=Kalam&display=swap" rel="stylesheet">
+    <script src="js/mrLIB.js"></script>
+    <script src="js/index.js"></script>
+</head>
+
+<header>
+    <h1>Phyllotaxis Interactive Sandbox</h1>
+</header>
+
+<body>
+    <h3>What is a phyllotaxis?</h3>
+    <p>It is an arrangement of leaves on a plant stem. From there is spirals around of patterns
+        in nature. The term of 'phyllotaxis' was termed by Charles Bonnet to describe the arrangement of leaves on a
+        plant.</p>
+    <p>The number of spirals can be determined by the phyllotactic pattern through the Fibonacci sequence. This angle is
+        137.5&#176;, also known as the divergence angle. The formula used for the phyllotaxis is the Vogel's formula.
+        Each new floret is at a fixed angle with respect to the preceding floret. The position for a new floret fits to
+        the largest gap bewteen the position vectors of older florets.</p>
+    <h3>Instructions on Functions</h3>
+    <p>There are a few different functions to use. There are radio buttons, slider, dropdown, and button. The following
+        are the names and functions: </p>
+    <ul>
+        <li>Pre-set Degrees: Already set values to change the divergence. (radio)</li>
+        <li>Degrees Slider: A value range of 1 to 200, with a preset value of 137 divergence. (slider)</li>
+        <li>FPS: Changes the frames persecond to set values. (radio)</li>
+        <li>Change Background: Can choose black, off white, or gray for background. However this will restart the
+            program. (dropdown)</li>
+        <li>Color: Can choose bewteen a few choices to change the color of the phyllotaxis. (dropdown)</li>
+        <li>Restart Canvas: Will restart the canvas with the current settings. (button)</li>
+        <li>Play and Pause Button: The phyllotaxis will not start until "Play" is clicked. (button)</li>
+    </ul>
+
+    <!-- Controls for Phyllotaxis -->
+    <canvas id="canvas"></canvas>
+    <h2>Selective Functions:</h2>
+    <section id="controls">
+        <div class="degrees">
+            <label>Pre-set Degrees:
+                <section id="degreesChooser">
+                    <input type="radio" name="degree" value="5degrees">5&#176;
+                    <input type="radio" name="degree" value="75degrees">75&#176;
+                    <input type="radio" name="degree" value="100degrees">100&#176;
+                    <input type="radio" name="degree" value="137.5degrees" checked>137.5&#176;
+                    <input type="radio" name="degree" value="150degrees">150&#176;
+                </section>
+            </label>
+
+            <label>Degrees Slider:
+                <div id="degreesSlider">
+                    <input type="range" min="1" max="200" value="137.5">
+                </div>
+            </label>
+        </div>
+
+        <label>FPS:
+            <section id="fpsChooser">
+                <input type="radio" name="fps" value="5fps">5
+                <input type="radio" name="fps" value="50fps" checked>50
+                <input type="radio" name="fps" value="100">100
+                <input type="radio" name="fps" value="200fps">200
+
+            </section>
+        </label>
+
+        <label>Change Background:
+            <select id="canvasChooser">
+                <option value="black" selected>black</option>
+                <option value="#ebebeb">off white</option>
+                <option value="#b0b0ab">gray</option>
+            </select>
+        </label>
+
+        <label>Color:
+            <select id="colorChooser">
+                <option value="rgb1" selected>RGB-1</option>
+                <option value="rgb2">RBG-2</option>
+                <option value="hsl1">HSL-1</option>
+                <option value="hsl2">HSL-2</option>
+                <option value="blue">Blue</option>
+                <option value="coral">Coral</option>
+                <option value="randomColor">Random Color</option>
+            </select>
+        </label>
+
+        <button id="restartCanvas">Restart Canvas!</button>
+        <button id="playButton">Play</button><button id="pauseButton">Pause</button>
+    </section>
+
+    <footer>
+        <p>&copy; 2019 Mililani Rosare</p>
+    </footer>
+
+</body>
+
+
+</html>
